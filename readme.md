@@ -53,7 +53,11 @@ See below for our future steps.
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running.
+A step-by-step series of instructions that tell you how to get the project running locally is given below. Google every issue you face following the below instructions or just ask us in our Discord channel.
+- Fork and Clone the Repository
+- Use Visual Studio Code/Android Studio
+- In the terminal type flutter pub get
+- Type flutter run in Terminal / Choose Run --> Run without Debugging and play it in any emulator of your choice
 
 
 ## Live demo
@@ -61,8 +65,11 @@ A step by step series of examples that tell you how to get a development env run
 
 ## Built with
 
-- []()
-- []()
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Flutter/Dart](https://flutter.dev/)
+- [SQFlite Backend](https://pub.dev/packages/sqflite)
+- [Hive Database](https://pub.dev/packages/hive)
+- [Shared Preferences](https://pub.dev/packages/shared_preferences)
 
 ## Contributing
 
