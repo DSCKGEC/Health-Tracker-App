@@ -49,15 +49,48 @@ See below for our future steps.
 
 
 ### Prerequisites
+1. Basic Understanding of Programming Language (preferably, C++/Java)
+2. OOPS
+3. Understanding of the Flutter Framework by Google
 
 
 ### Installing
 
+#### Softwares needed
+
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Android Studio](https://developer.android.com/studio)
+
+
+#### Knowledge needed
+
+The best way to learn the following is to google each and everything!
+
+-   Very basic understanding of Git and GitHub:
+
+    -   What are repositories (local - remote - upstream), issues, pull requests
+    -   How to clone a repository, how to fork a repository, how to set upstreams
+    -   Adding, committing, pulling, pushing changes to remote repositories
+
+- For Flutter SDK:
+
+  - [Getting Started with Flutter](https://codelabs.developers.google.com/codelabs/first-flutter-app-pt1)
+
+  - Beginner to Intermediate knowledge of Flutter UI Design Patterns, Widgets, Routers, Navigation,etc.
+
+  - Knowledge of integrating third party libaries and SQLite Backend (for solving backend issues).
+
+- For Android: (Good to have but not mandatory)
+
+  - [Getting Started with Java](https://www.w3schools.com/java/java_getstarted.asp)
+  - [Android Developers Guide](https://developer.android.com/guide)
+
+#### Instructions
 A step-by-step series of instructions that tell you how to get the project running locally is given below. Google every issue you face following the below instructions or just ask us in our Discord channel.
 - Fork and Clone the Repository
 - Use Visual Studio Code/Android Studio
 - In the terminal type flutter pub get
-- Type flutter run in Terminal / Choose Run --> Run without Debugging and play it in any emulator of your choice
+- Type flutter run in Terminal / Choose Run --> Run without Debugging and play it in any emulator of your choice(Special Note: Do not run it in WEB mode as Shared Preferences is there.)
 
 
 ## Live demo
