@@ -19,16 +19,16 @@ Health Tracker is your one stop solution to keep your heath related information 
 1. [Acknowledgments](#acknowledgments)
 
 ## Description
-Tracking your daily Health Habits and essential Medicines
+Tracking your daily Health Habits and essential Medicines as per the prescribed Schedule.
 
 ### What's the problem?
 Most people often forget to take their medicines at regular intervals or to keep track of their health parameters.It becomes really useful if an app takes care of all those things for us.It really keeps us up to date with the schedule and takes care of our health.
 
 ### How can this project help?
-Health tracker App will send notifications at regular intervals so that the user does not forget to take their prescribed medicines as per the schedule, also keep track of their body vitals.
+Health tracker App will send notifications at regular intervals so that the user does not forget to take their prescribed medicines as per the schedule, also keep track of their essential information.
 
 ### The idea
-The idea is to integrate the Flutter App with SQLite Backend where we will store all the user's data.
+The idea is to integrate the Flutter App with SQLite Backend where we will store all the user's data in a secured and organized way.
 
 ## Project structure
 
@@ -113,8 +113,17 @@ A step-by-step series of instructions that tell you how to get the project runni
 
 ## Live demo
 
+https://user-images.githubusercontent.com/79189686/179920394-c6c2ea99-364c-4583-b330-ae0b8567be95.mp4
+
+<img src="https://user-images.githubusercontent.com/79189686/179920463-9fc020b5-e959-4113-8fe9-cdb13fedfd38.jpg" width="200" height="400">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://user-images.githubusercontent.com/79189686/179920496-71e15ea6-b734-4d63-9065-816059decc83.jpg" width="200" height="400">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://user-images.githubusercontent.com/79189686/179920570-3b2e6915-7f84-478e-a6a4-153099ef754b.jpg" width="200" height="400">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://user-images.githubusercontent.com/79189686/179922326-47cab17c-054c-4119-8343-f12a58ed58ed.jpg" width="200" height="400">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://user-images.githubusercontent.com/79189686/179920756-1cf8a943-eefb-4564-9370-5184395db465.jpg" width="200" height="400">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://user-images.githubusercontent.com/79189686/179920825-970f24e5-0414-4bbc-b64e-fa6d438bd85b.jpg" width="200" height="400">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 ## Built with
+
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Flutter/Dart](https://flutter.dev/)
