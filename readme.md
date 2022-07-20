@@ -33,14 +33,25 @@ The idea is to integrate the Flutter App with SQLite Backend where we will store
 ## Project structure
 
 ```
-```
+├── .github/            github related files like PR templates, contribution guidelines
+├── android             flutter generated android specific code
+├──ios                  flutter generated ios specific code (for future use)
+├── lib                 contains all source codes and modules of projects
+  ├──controllers        contains the backend code
+  ├──pages              contains the app screens
+├──test                 individual widgets can be tested here
+├── .gitignore          stores files and directories to be ignored in commits
+├── LICENSE             the open source license
+├── pubspec.yaml        metadata of the project
+├── pubspec.lock        stores version of every package used in the project
+└── readme.md           details and instructions about the project go here
 
 ## Project roadmap
 
 The project currently does the following things.
 
-- Takes the medicine details (dosage,price) etc.
-- The user can view all these in an organized way.
+- Takes the medicine details (dosage,price,mfg company, critical or not), when to eat, etc.
+- Show the above data in the form of Cards in an Organized manner.
 
 See below for our future steps.
 
