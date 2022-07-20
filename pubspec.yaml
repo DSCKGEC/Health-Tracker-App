@@ -92,6 +92,9 @@ flutter:
     - assets/lottiefile/get-started.json
     - assets/lottiefile/exitload.json
     - assets/lottiefile/sleep.json
+    - assets/lottiefile/dashboard-loading.json
+    - assets/lottiefile/play.json
+    - assets/lottiefile/list.json
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -278,30 +278,27 @@ class _MedicineRoutineState extends State<MedicineRoutine> {
   }
 
   Widget get customAppBar {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(12.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            IconButton(
-                onPressed: () {},
-                icon: const Icon(FontAwesomeIcons.arrowLeft,
-                    color: Colors.black, size: 22)),
-            const Text(
-              'Medicine Plan List',
-              style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(width: 10),
-            const Icon(Icons.next_plan_outlined, color: Colors.black, size: 30),
-          ],
-        ),
+    return Padding(
+      padding: const EdgeInsets.all(12),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          IconButton(
+              onPressed: () {},
+              icon: const Icon(FontAwesomeIcons.arrowLeft,
+                  color: Colors.black, size: 22)),
+          const Text(
+            'Medicine Plan List',
+            style: TextStyle(
+                color: Colors.black, fontSize: 22, fontWeight: FontWeight.bold),
+          ),
+          Container(
+            color: Colors.white,
+            height: 70,
+            width: 140,
+            child: Lottie.asset('assets/lottiefile/play.json'),
+          ),
+        ],
       ),
     );
   }

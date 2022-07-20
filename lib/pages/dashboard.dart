@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttericon/iconic_icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:lottie/lottie.dart';
 import 'package:medi_app/controllers/db_helper.dart';
 
 class Dashboard extends StatefulWidget {
@@ -280,21 +281,39 @@ class _DashboardState extends State<Dashboard> {
             const SizedBox(height: 30),
             Row(
               children: [
-                const SizedBox(
-                  width: 28,
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        const SizedBox(
+                          width: 28,
+                        ),
+                        Text('Good $greet,',
+                            style: TextStyle(color: bg, fontSize: 30)),
+                      ],
+                    ),
+                    const SizedBox(height: 11),
+                    Row(
+                      children: [
+                        const SizedBox(
+                          width: 28,
+                        ),
+                        Text(val,
+                            style: TextStyle(
+                                color: bg,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 30)),
+                      ],
+                    ),
+                  ],
                 ),
-                Text('Good $greet,', style: TextStyle(color: bg, fontSize: 30)),
-              ],
-            ),
-            const SizedBox(height: 11),
-            Row(
-              children: [
-                const SizedBox(
-                  width: 28,
-                ),
-                Text(val,
-                    style: TextStyle(
-                        color: bg, fontWeight: FontWeight.bold, fontSize: 30)),
+                const Spacer(),
+                SizedBox(
+                    height: 80,
+                    width: 110,
+                    child: Lottie.asset(
+                        'assets/lottiefile/dashboard-loading.json'))
               ],
             ),
             const SizedBox(height: 16),

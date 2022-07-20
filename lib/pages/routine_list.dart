@@ -440,8 +440,6 @@ class _RoutineListState extends State<RoutineList> {
     );
   }
 
-
-
   Widget get customAppBar {
     return Container(
       decoration: BoxDecoration(
@@ -463,8 +461,12 @@ class _RoutineListState extends State<RoutineList> {
                   fontSize: 22,
                   fontWeight: FontWeight.bold),
             ),
-            const SizedBox(width: 10),
-            const Icon(Icons.next_plan_outlined, color: Colors.black, size: 30),
+            Container(
+              color: Colors.white,
+              height: 60,
+              width: 80,
+              child: Lottie.asset('assets/lottiefile/checklist.json'),
+            ),
           ],
         ),
       ),

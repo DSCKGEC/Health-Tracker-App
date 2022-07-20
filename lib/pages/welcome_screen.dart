@@ -34,7 +34,37 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           builder: ((context, snapshot) {
             return Column(
               children: [
-                const SizedBox(height: 30),
+                const SizedBox(height: 20),
+                Padding(
+                  padding: const EdgeInsets.only(left: 20.0, right: 20),
+                  child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.grey.shade100,
+                      ),
+                      onPressed: () {},
+                      child: Padding(
+                        padding: const EdgeInsets.only(
+                            top: 14.0, bottom: 14, left: 6, right: 6),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Health tracker',
+                              style: TextStyle(
+                                  color: Colors.lightGreen.shade800,
+                                  fontSize: 28,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            const SizedBox(width: 20),
+                            SizedBox(
+                                height: 50,
+                                width: 80,
+                                child: Lottie.asset(
+                                    'assets/lottiefile/healthcare-loader.json'))
+                          ],
+                        ),
+                      )),
+                ),
                 Row(
                   children: [
                     Expanded(
@@ -45,13 +75,11 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     ),
                   ],
                 ),
+                const Spacer(),
                 GestureDetector(
                   child: Padding(
                     padding: const EdgeInsets.only(left: 30, right: 30),
-                    child: SizedBox(
-                        height: 200,
-                        child:
-                            Lottie.asset('assets/lottiefile/get-started.json')),
+                    child: Lottie.asset('assets/lottiefile/get-started.json'),
                   ),
                   onTap: () {
                     if (user_name != '') {
@@ -62,7 +90,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                           builder: ((context) => const LoginPage())));
                     }
                   },
-                )
+                ),
+                const SizedBox(height: 50)
               ],
             );
           }),
