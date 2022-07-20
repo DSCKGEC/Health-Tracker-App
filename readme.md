@@ -19,7 +19,7 @@ A basic GitHub repository template for initializing open source projects on a si
 1. [Acknowledgments](#acknowledgments)
 
 ## Description
-Tracking your daily Health Habits and essential 
+Tracking your daily Health Habits and essential Medicines
 
 ### What's the problem?
 Most people often forget to take their medicines at regular intervals or to keep track of their health parameters.It becomes really useful if an app takes care of all those things for us.It really keeps us up to date with the schedule and takes care of our health.
@@ -45,6 +45,8 @@ The idea is to integrate the Flutter App with SQLite Backend where we will store
 ├── pubspec.yaml        metadata of the project
 ├── pubspec.lock        stores version of every package used in the project
 └── readme.md           details and instructions about the project go here
+
+```
 
 ## Project roadmap
 
