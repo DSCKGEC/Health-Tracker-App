@@ -19,12 +19,16 @@ A basic GitHub repository template for initializing open source projects on a si
 1. [Acknowledgments](#acknowledgments)
 
 ## Description
+Tracking your daily Health Habits and essential 
 
 ### What's the problem?
+Most people often forget to take their medicines at regular intervals or to keep track of their health parameters.It becomes really useful if an app takes care of all those things for us.It really keeps us up to date with the schedule and takes care of our health.
 
 ### How can this project help?
+Health tracker App will send notifications at regular intervals so that the user does not forget to take their prescribed medicines as per the schedule, also keep track of their body vitals.
 
 ### The idea
+The idea is to integrate the Flutter App with SQLite Backend where we will store all the user's data.
 
 ## Project structure
 
@@ -35,15 +39,15 @@ A basic GitHub repository template for initializing open source projects on a si
 
 The project currently does the following things.
 
-- Feature 1
-- Feature 2
-- Feature 3
+- Takes the medicine details (dosage,price) etc.
+- The user can view all these in an organized way.
 
 See below for our future steps.
 
-- Feature 1
-- Feature 2
-- Feature 3
+- Send notifications before a certain amount of time before the scheduled time of taking a medicine.
+- Store all Doctor prescriptions in the App in an organized way.
+- Track Walking time, Sleep time, Heart Beat, Blood Pressure,and other regular vitals.
+- Give important Health Tips at regular intervals.
 
 ## Getting started
 
