@@ -3,7 +3,7 @@
 [![Contributors](https://img.shields.io/github/contributors/dsckgec/Health-Tracker-App.svg)](https://github.com/dsckgec/Health-Tracker-App/graphs/contributors) [![Forks](https://img.shields.io/github/forks/dsckgec/Health-Tracker-App.svg)](https://github.com/dsckgec/Health-Tracker-App/network/members) [![Issues](https://img.shields.io/github/issues/dsckgec/Health-Tracker-App.svg)](https://github.com/dsckgec/Health-Tracker-App/issues) [![Pull Request](https://img.shields.io/github/issues-pr-closed-raw/dsckgec/Health-Tracker-App)](https://github.com/dsckgec/Health-Tracker-App/pulls)
 
 
-A basic GitHub repository template for initializing open source projects on a single click.
+Health Tracker is your one stop solution to keep your heath related information in a secured way. 
 
 ## Contents
 
