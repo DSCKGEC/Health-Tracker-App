@@ -1,6 +1,6 @@
-# Submission or project name
+# Health Tracker App
 
-[![Contributors](https://img.shields.io/github/contributors/dsckgec/project-template.svg)](https://github.com/dsckgec/project-template/graphs/contributors) [![Forks](https://img.shields.io/github/forks/dsckgec/project-template.svg)](https://github.com/dsckgec/project-template/network/members) [![Issues](https://img.shields.io/github/issues/dsckgec/project-template.svg)](https://github.com/dsckgec/project-template/issues) [![Pull Request](https://img.shields.io/github/issues-pr-closed-raw/dsckgec/project-template)](https://github.com/dsckgec/project-template/pulls)
+[![Contributors](https://img.shields.io/github/contributors/dsckgec/Health-Tracker-App.svg)](https://github.com/dsckgec/Health-Tracker-App/graphs/contributors) [![Forks](https://img.shields.io/github/forks/dsckgec/Health-Tracker-App.svg)](https://github.com/dsckgec/Health-Tracker-App/network/members) [![Issues](https://img.shields.io/github/issues/dsckgec/Health-Tracker-App.svg)](https://github.com/dsckgec/Health-Tracker-App/issues) [![Pull Request](https://img.shields.io/github/issues-pr-closed-raw/dsckgec/Health-Tracker-App)](https://github.com/dsckgec/Health-Tracker-App/pulls)
 
 
 A basic GitHub repository template for initializing open source projects on a single click.
@@ -60,6 +60,7 @@ See below for our future steps.
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Android Studio](https://developer.android.com/studio)
+- [Flutter](https://flutter.dev/)
 
 
 #### Knowledge needed
