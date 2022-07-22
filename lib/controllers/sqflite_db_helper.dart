@@ -10,11 +10,11 @@ import 'package:sqflite/sqflite.dart';
 // the database helper class
 class Databasehelper {
   // database name
-  static const _databasename = "money.db";
+  static const _databasename = "health.db";
   static const _databaseversion = 1;
 
   // the table name
-  static const table = "transactions";
+  static const table = "medicinedatabase";
 
   // column names
   static const columnID = 'id';
@@ -55,6 +55,10 @@ class Databasehelper {
     await db.execute('''
       CREATE TABLE $table (
         $columnID INTEGER PRIMARY KEY,
+
+        //all medicine data
+
+        
         $columnMedicineName TEXT NOT NULL,
         $columnMedicinePrice INTEGER NOT NULL,
         $columnQuantity INTEGER NOT NULL,

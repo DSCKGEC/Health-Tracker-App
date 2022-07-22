@@ -461,8 +461,7 @@ class _RoutineListState extends State<RoutineList> {
                   fontSize: 22,
                   fontWeight: FontWeight.bold),
             ),
-            Container(
-              color: Colors.white,
+            SizedBox(
               height: 60,
               width: 80,
               child: Lottie.asset('assets/lottiefile/checklist.json'),

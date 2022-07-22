@@ -292,8 +292,7 @@ class _MedicineRoutineState extends State<MedicineRoutine> {
             style: TextStyle(
                 color: Colors.black, fontSize: 22, fontWeight: FontWeight.bold),
           ),
-          Container(
-            color: Colors.white,
+          SizedBox(
             height: 70,
             width: 140,
             child: Lottie.asset('assets/lottiefile/play.json'),

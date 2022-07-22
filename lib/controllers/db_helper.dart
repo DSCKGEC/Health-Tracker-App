@@ -13,7 +13,8 @@ class DbHelper {
     box = Hive.box('health');
   }
 
-  void addData(String medicineName,int medicinePrice,int quantity,String note,bool critical) async {
+  void addData(String medicineName, int medicinePrice, int quantity,
+      String note, bool critical) async {
     var value = {
       'medicineName': medicineName,
       'medicinePrice': medicinePrice,
