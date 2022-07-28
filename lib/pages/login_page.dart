@@ -15,6 +15,36 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   TextEditingController name = TextEditingController();
+  TextEditingController age = TextEditingController();
+  TextEditingController phoneNumber = TextEditingController();
+
+  Widget buildTextField(
+      String hntText, String lblText, TextEditingController newController) {
+    return Row(
+      children: [
+        Expanded(
+          child: TextField(
+            controller: newController,
+            cursorColor: Colors.deepOrangeAccent.shade200,
+            style: const TextStyle(
+                color: Colors.black, fontWeight: FontWeight.bold),
+            decoration: InputDecoration(
+                hintText: hntText,
+                labelText: lblText,
+                labelStyle: const TextStyle(fontSize: 20),
+                border: const OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.black, width: 5)),
+                prefixIcon: Icon(
+                  Icons.person_add_alt_rounded,
+                  color: Colors.deepOrangeAccent.shade200,
+                  size: 25,
+                )),
+          ),
+        ),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,28 +63,21 @@ class _LoginPageState extends State<LoginPage> {
             const SizedBox(height: 30),
             Padding(
               padding: const EdgeInsets.only(left: 30, right: 30),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: TextField(
-                      controller: name,
-                      cursorColor: Colors.deepOrangeAccent.shade200,
-                      style: const TextStyle(
-                          color: Colors.black, fontWeight: FontWeight.bold),
-                      decoration: InputDecoration(
-                          hintText: 'Profile Name',
-                          labelText: 'Enter your Name',
-                          labelStyle: const TextStyle(fontSize: 20),
-                          border: const OutlineInputBorder(
-                              borderSide:
-                                  BorderSide(color: Colors.black, width: 5)),
-                          prefixIcon: Icon(
-                            Icons.person_add_alt_rounded,
-                            color: Colors.deepOrangeAccent.shade200,
-                            size: 25,
-                          )),
-                    ),
-                  )
+              child: Column(
+                children: <Widget>[
+                  buildTextField('Profile Name', 'Enter your Name', name),
+                  const SizedBox(
+                    height: 12,
+                  ),
+                  buildTextField('Age', 'Enter your age', age),
+                  const SizedBox(
+                    height: 12,
+                  ),
+                  buildTextField(
+                      'Phone Number', 'Enter your phone number', phoneNumber),
+                  const SizedBox(
+                    height: 12,
+                  ),
                 ],
               ),
             ),
@@ -65,37 +88,38 @@ class _LoginPageState extends State<LoginPage> {
                 children: [
                   Expanded(
                     child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          primary: Colors.purpleAccent.shade700,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20)),
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.purpleAccent.shade700,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)),
+                      ),
+                      onPressed: () async {
+                        DbHelper dbHelper = DbHelper();
+                        await dbHelper.addName(name.text);
+                        Navigator.of(context).push(CupertinoPageRoute(
+                            builder: ((context) => const BottomNavBar())));
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: const [
+                            Text(
+                              'Login',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 22,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            Icon(Icons.app_registration_rounded,
+                                color: Colors.white, size: 34),
+                            SizedBox(width: 20),
+                            Icon(Icons.navigation_rounded,
+                                color: Colors.white, size: 34),
+                          ],
                         ),
-                        onPressed: () async {
-                          DbHelper dbHelper = DbHelper();
-                          await dbHelper.addName(name.text);
-                          Navigator.of(context).push(CupertinoPageRoute(
-                              builder: ((context) => const BottomNavBar())));
-                        },
-                        child: Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Text(
-                                'Login',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 22,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              Icon(Icons.app_registration_rounded,
-                                  color: Colors.white, size: 34),
-                              SizedBox(width: 20),
-                              Icon(Icons.navigation_rounded,
-                                  color: Colors.white, size: 34),
-                            ],
-                          ),
-                        )),
+                      ),
+                    ),
                   ),
                 ],
               ),
