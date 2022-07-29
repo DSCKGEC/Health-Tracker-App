@@ -18,8 +18,8 @@ class _MedicineRoutineState extends State<MedicineRoutine> {
   DbHelper dbHelper = DbHelper();
   Map? data;
 
-  Color bg = Colors.white;
-  Color col = const Color.fromARGB(203, 87, 14, 190);
+  // Color bg = Colors.white;
+  // Color col = const Color.fromARGB(203, 87, 14, 190);
 
   @override
   void initState() {
@@ -120,7 +120,7 @@ class _MedicineRoutineState extends State<MedicineRoutine> {
                           const Text(
                             'My Activity',
                             style: TextStyle(
-                                color: Colors.black,
+                                // color: Colors.black,
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -128,7 +128,7 @@ class _MedicineRoutineState extends State<MedicineRoutine> {
                           IconButton(
                             onPressed: () {},
                             icon: const Icon(FontAwesomeIcons.arrowRight),
-                            color: Colors.black,
+                            // color: Colors.black,
                             iconSize: 22,
                           )
                         ],
@@ -285,12 +285,18 @@ class _MedicineRoutineState extends State<MedicineRoutine> {
         children: [
           IconButton(
               onPressed: () {},
-              icon: const Icon(FontAwesomeIcons.arrowLeft,
-                  color: Colors.black, size: 22)),
+              icon: const Icon(
+                FontAwesomeIcons.arrowLeft,
+                // color: Colors.black,
+                size: 22,
+              )),
           const Text(
             'Medicine Plan List',
             style: TextStyle(
-                color: Colors.black, fontSize: 22, fontWeight: FontWeight.bold),
+              // color: Colors.black,
+              fontSize: 22,
+              fontWeight: FontWeight.bold,
+            ),
           ),
           SizedBox(
             height: 70,

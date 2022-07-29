@@ -68,8 +68,8 @@ class _SettingsState extends State<Settings> {
       padding: const EdgeInsets.only(top: 6, left: 1, right: 0, bottom: 6),
       child: ElevatedButton(
           onPressed: () {
-             Navigator.of(context).push(CupertinoPageRoute(
-                          builder: ((context) => const WelcomeScreen())));
+            Navigator.of(context).push(CupertinoPageRoute(
+                builder: ((context) => const WelcomeScreen())));
           },
           style: ElevatedButton.styleFrom(primary: Colors.black),
           child: Padding(
@@ -168,14 +168,25 @@ class _SettingsState extends State<Settings> {
       padding: const EdgeInsets.all(12.0),
       child: Row(
         children: [
-          const Icon(Icons.arrow_back, color: Colors.black, size: 38),
+          const Icon(
+            Icons.arrow_back,
+            // color: Colors.black,
+            size: 38,
+          ),
           const SizedBox(width: 60),
-          const Icon(Icons.settings, color: Colors.black, size: 37),
+          const Icon(
+            Icons.settings,
+            // color: Colors.black,
+            size: 37,
+          ),
           const SizedBox(width: 10),
           const Text(
             'Settings',
             style: TextStyle(
-                color: Colors.black, fontSize: 22, fontWeight: FontWeight.bold),
+              // color: Colors.black,
+              fontSize: 22,
+              fontWeight: FontWeight.bold,
+            ),
           ),
           const Spacer(),
           SizedBox(
