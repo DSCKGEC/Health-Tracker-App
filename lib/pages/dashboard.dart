@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:fluttericon/iconic_icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:lottie/lottie.dart';
+import 'package:medi_app/constants/color_codes.dart';
 import 'package:medi_app/controllers/db_helper.dart';
 
 class Dashboard extends StatefulWidget {
@@ -13,8 +14,8 @@ class Dashboard extends StatefulWidget {
 }
 
 class _DashboardState extends State<Dashboard> {
-  Color bg = Colors.white;
-  Color col = const Color.fromARGB(203, 87, 14, 190);
+  // Color AppColors.white = Colors.white;
+  // Color col = const Color.fromARGB(203, 87, 14, 190);
 
   final String greet = "Morning";
   DbHelper dbHelper = DbHelper();
@@ -32,8 +33,8 @@ class _DashboardState extends State<Dashboard> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            systemOverlayStyle: SystemUiOverlayStyle(
-              statusBarColor: bg,
+            systemOverlayStyle: const SystemUiOverlayStyle(
+              statusBarColor: AppColors.white,
             ),
             toolbarHeight: 0),
         body: SingleChildScrollView(
@@ -54,7 +55,7 @@ class _DashboardState extends State<Dashboard> {
                             const Text(
                               'Select your Medical Tools',
                               style: TextStyle(
-                                  color: Colors.black,
+                                  // color: Colors.black,
                                   fontSize: 18,
                                   fontWeight: FontWeight.w500),
                             ),
@@ -62,7 +63,7 @@ class _DashboardState extends State<Dashboard> {
                             Text(
                               'SEE ALL',
                               style: TextStyle(
-                                  color: col.withOpacity(0.7),
+                                  color: AppColors.primary.withOpacity(0.7),
                                   fontSize: 14,
                                   fontWeight: FontWeight.w500),
                             ),
@@ -87,7 +88,7 @@ class _DashboardState extends State<Dashboard> {
                             Text(
                               'SEE ALL',
                               style: TextStyle(
-                                  color: col.withOpacity(0.7),
+                                  color: AppColors.primary.withOpacity(0.7),
                                   fontSize: 14,
                                   fontWeight: FontWeight.w500),
                             ),
@@ -172,7 +173,7 @@ class _DashboardState extends State<Dashboard> {
   Widget element(IconData ic, String text) {
     return Container(
       decoration: BoxDecoration(
-          color: bg,
+          color: AppColors.white,
           borderRadius: BorderRadius.circular(15),
           border: Border.all(width: 2, color: Colors.white),
           boxShadow: [
@@ -192,11 +193,14 @@ class _DashboardState extends State<Dashboard> {
         child: Column(
           children: [
             IconButton(
-                onPressed: () {}, icon: Icon(ic), color: col, iconSize: 18),
+                onPressed: () {},
+                icon: Icon(ic),
+                color: AppColors.primary,
+                iconSize: 18),
             const SizedBox(height: 4),
             Text(
               text,
-              style: TextStyle(color: col, fontSize: 12),
+              style: const TextStyle(color: AppColors.primary, fontSize: 12),
             )
           ],
         ),
@@ -236,7 +240,7 @@ class _DashboardState extends State<Dashboard> {
   Widget maincontainer() {
     return Container(
       decoration: BoxDecoration(
-        color: col,
+        color: AppColors.primary,
         borderRadius: BorderRadius.circular(26),
       ),
       child: Padding(
@@ -247,30 +251,35 @@ class _DashboardState extends State<Dashboard> {
             Row(
               children: [
                 const SizedBox(width: 12),
-                Icon(Iconic.doc_inv_alt, color: bg, size: 26),
+                const Icon(Iconic.doc_inv_alt,
+                    color: AppColors.white, size: 26),
                 Text('    HEALTH TRACKER '.toUpperCase(),
-                    style: TextStyle(
-                        color: bg, fontSize: 18, fontWeight: FontWeight.bold)),
+                    style: const TextStyle(
+                        color: AppColors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold)),
                 const Spacer(),
                 Container(
-                  decoration: BoxDecoration(shape: BoxShape.circle, color: bg),
-                  child: Padding(
-                    padding: const EdgeInsets.all(6.0),
+                  decoration: const BoxDecoration(
+                      shape: BoxShape.circle, color: AppColors.white),
+                  child: const Padding(
+                    padding: EdgeInsets.all(6.0),
                     child: Icon(
                       Icons.notifications_active_rounded,
-                      color: col,
+                      color: AppColors.primary,
                       size: 19,
                     ),
                   ),
                 ),
                 const SizedBox(width: 8),
                 Container(
-                  decoration: BoxDecoration(shape: BoxShape.circle, color: bg),
-                  child: Padding(
-                    padding: const EdgeInsets.all(6.0),
+                  decoration: const BoxDecoration(
+                      shape: BoxShape.circle, color: AppColors.white),
+                  child: const Padding(
+                    padding: EdgeInsets.all(6.0),
                     child: Icon(
                       Iconic.user,
-                      color: col,
+                      color: AppColors.primary,
                       size: 19,
                     ),
                   ),
@@ -290,7 +299,8 @@ class _DashboardState extends State<Dashboard> {
                           width: 28,
                         ),
                         Text('Good $greet,',
-                            style: TextStyle(color: bg, fontSize: 30)),
+                            style: const TextStyle(
+                                color: AppColors.white, fontSize: 30)),
                       ],
                     ),
                     const SizedBox(height: 11),
@@ -300,8 +310,8 @@ class _DashboardState extends State<Dashboard> {
                           width: 28,
                         ),
                         Text(val,
-                            style: TextStyle(
-                                color: bg,
+                            style: const TextStyle(
+                                color: AppColors.white,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 30)),
                       ],

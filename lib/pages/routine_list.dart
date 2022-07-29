@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hive/hive.dart';
+import 'package:medi_app/constants/color_codes.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:swipe_deck/swipe_deck.dart';
 import 'package:lottie/lottie.dart';
@@ -21,8 +22,8 @@ class _RoutineListState extends State<RoutineList> {
   DbHelper dbHelper = DbHelper();
   Map? data;
 
-  Color bg = Colors.white;
-  Color col = const Color.fromARGB(203, 87, 14, 190);
+  // Color bg = Colors.white;
+  // Color col = const Color.fromARGB(203, 87, 14, 190);
   String val = '';
   Future getName() async {
     String? name = await dbHelper.getName();
@@ -90,15 +91,18 @@ class _RoutineListState extends State<RoutineList> {
                 Padding(
                   padding: const EdgeInsets.only(left: 25, right: 25),
                   child: Row(
-                    children: [
+                    children: const [
                       Icon(Icons.admin_panel_settings_outlined,
-                          color: col, size: 32),
-                      const SizedBox(width: 14),
+                          color: AppColors.primary, size: 32),
+                      SizedBox(width: 14),
                       Text('July 16,2022',
                           style: TextStyle(
-                              color: Colors.grey.shade800, fontSize: 18)),
-                      const Spacer(),
-                      Icon(Icons.emoji_people, color: col, size: 32)
+                            // color: Colors.grey.shade800,
+                            fontSize: 18,
+                          )),
+                      Spacer(),
+                      Icon(Icons.emoji_people,
+                          color: AppColors.primary, size: 32)
                     ],
                   ),
                 ),
@@ -110,7 +114,7 @@ class _RoutineListState extends State<RoutineList> {
                       Text(
                         'Hi $val',
                         style: const TextStyle(
-                            color: Colors.black,
+                            // color: Colors.black,
                             fontSize: 23,
                             fontWeight: FontWeight.bold),
                       ),
@@ -134,18 +138,21 @@ class _RoutineListState extends State<RoutineList> {
                       const Text(
                         'Health Tips',
                         style: TextStyle(
-                            color: Colors.black,
+                            // color: Colors.black,
                             fontSize: 24,
                             fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(width: 16),
-                      const Icon(FontAwesomeIcons.notesMedical,
-                          color: Colors.black, size: 26),
+                      const Icon(
+                        FontAwesomeIcons.notesMedical,
+                        // color: Colors.black,
+                        size: 26,
+                      ),
                       const Spacer(),
                       IconButton(
                         onPressed: () {},
                         icon: const Icon(Icons.navigate_next_rounded),
-                        color: Colors.black,
+                        // color: Colors.black,
                         iconSize: 36,
                       )
                     ],
@@ -451,13 +458,17 @@ class _RoutineListState extends State<RoutineList> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             IconButton(
-                onPressed: () {},
-                icon: const Icon(FontAwesomeIcons.arrowLeft,
-                    color: Colors.black, size: 22)),
+              onPressed: () {},
+              icon: const Icon(
+                FontAwesomeIcons.arrowLeft,
+                // color: Colors.black,
+                size: 22,
+              ),
+            ),
             const Text(
               'Health Plan Details',
               style: TextStyle(
-                  color: Colors.black,
+                  // color: Colors.black,
                   fontSize: 22,
                   fontWeight: FontWeight.bold),
             ),

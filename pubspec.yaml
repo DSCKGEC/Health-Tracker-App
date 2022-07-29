@@ -108,18 +108,18 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  fonts:
-    - family: roboto
-      fonts:
-        - asset: assets/Fonts/RobotoFont.ttf
+  # fonts:
+  #   - family: roboto
+  #     fonts:
+  #       - asset: assets/Fonts/RobotoFont.ttf
     
-    - family: lato
-      fonts:
-        - asset: assets/Fonts/Lato-Regular.ttf
+  #   - family: lato
+  #     fonts:
+  #       - asset: assets/Fonts/Lato-Regular.ttf
 
-    - family: cascadia
-      fonts:
-        - asset: assets/Fonts/CascadiaMono.ttf
+  #   - family: cascadia
+  #     fonts:
+  #       - asset: assets/Fonts/CascadiaMono.ttf
 
   
   # For details regarding fonts from package dependencies,
