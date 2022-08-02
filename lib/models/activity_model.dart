@@ -5,6 +5,7 @@ class Activity {
   int heartRate = 0;
   double waterConsumed = 0.0;
 
+  // INITIALIZE ACTIVITY
   Activity(
       {this.id,
         this.walking = 0,
@@ -12,6 +13,7 @@ class Activity {
         this.heartRate = 0,
         this.waterConsumed = 0.0});
 
+  // Get data in dict, json or map format
   Map<String, dynamic> toMap() {
     return {
       'id': id,
@@ -22,6 +24,7 @@ class Activity {
     };
   }
 
+  // convert the parameters from map data in to activity
   Activity.fromMap(Map<String, dynamic> map) {
     id = map['id'];
     walking = map['walking'];
@@ -30,6 +33,8 @@ class Activity {
     waterConsumed = map['waterConsumed'];
   }
 
+  // override the class string, so that when you want to print the class object
+  // it display the data the class is holding
   @override
   String toString() {
     return 'Activity($id, $walking, $sleeping, $heartRate, $waterConsumed)';
