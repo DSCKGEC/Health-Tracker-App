@@ -10,6 +10,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectId" id="2ClFBApSzITSTn5XQtSJvpP0EsQ" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" />
