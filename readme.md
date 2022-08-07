@@ -135,7 +135,10 @@ https://user-images.githubusercontent.com/79189686/179920394-c6c2ea99-364c-4583-
 
 Please read [contributing.md](contributing.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
-## Authors
+## Author
+<a href="https://github.com/saptarshiweb"><img src="https://contrib.rocks/image?repo=saptarshiweb/cryptotracker"></a>
+
+## Contributors
 
 <a href="https://github.com/DSCKGEC/Health-Tracker-App/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=DSCKGEC/Health-Tracker-App" />
