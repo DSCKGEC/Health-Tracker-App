@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hive/hive.dart';
+import 'package:medi_app/constants/color_codes.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:swipe_deck/swipe_deck.dart';
 import 'package:lottie/lottie.dart';
@@ -22,7 +23,7 @@ class _RoutineListState extends State<RoutineList> {
   Map? data;
 
   Color bg = Colors.white;
-  Color col = const Color.fromARGB(203, 87, 14, 190);
+  Color col = ColorCode().bgColor;
   String val = '';
   Future getName() async {
     String? name = await dbHelper.getName();

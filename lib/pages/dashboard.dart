@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:fluttericon/iconic_icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:lottie/lottie.dart';
+import 'package:medi_app/constants/color_codes.dart';
 import 'package:medi_app/controllers/db_helper.dart';
 
 class Dashboard extends StatefulWidget {
@@ -14,7 +15,7 @@ class Dashboard extends StatefulWidget {
 
 class _DashboardState extends State<Dashboard> {
   Color bg = Colors.white;
-  Color col = const Color.fromARGB(203, 87, 14, 190);
+  Color col = ColorCode().bgColor;
 
   final String greet = "Morning";
   DbHelper dbHelper = DbHelper();
@@ -79,7 +80,7 @@ class _DashboardState extends State<Dashboard> {
                             Text(
                               '''Today's Notification''',
                               style: TextStyle(
-                                  color: Colors.deepPurple.shade900,
+                                  color: col,
                                   fontSize: 19,
                                   fontWeight: FontWeight.bold),
                             ),
@@ -118,14 +119,13 @@ class _DashboardState extends State<Dashboard> {
                                               'Acute Coronary Syndrome',
                                               style: TextStyle(
                                                   fontWeight: FontWeight.bold,
-                                                  color: Colors
-                                                      .deepPurple.shade500,
+                                                  color: ColorCode().bgColor,
                                                   fontSize: 14),
                                             ),
                                             const Spacer(),
                                             Icon(
                                               Icons.cancel_outlined,
-                                              color: Colors.deepPurple.shade400,
+                                              color: col,
                                             )
                                           ],
                                         ),
@@ -145,8 +145,7 @@ class _DashboardState extends State<Dashboard> {
                                                 child: Text(
                                                   'Critical'.toUpperCase(),
                                                   style: TextStyle(
-                                                      color: Colors
-                                                          .deepPurple.shade900,
+                                                      color: col,
                                                       fontSize: 11,
                                                       fontWeight:
                                                           FontWeight.bold),

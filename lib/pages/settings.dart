@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:lottie/lottie.dart';
+import 'package:medi_app/constants/color_codes.dart';
 import 'package:medi_app/controllers/db_helper.dart';
 import 'package:medi_app/pages/welcome_screen.dart';
 
@@ -16,8 +17,9 @@ class Settings extends StatefulWidget {
 
 class _SettingsState extends State<Settings> {
   Color bg = Colors.white;
-  Color col = const Color.fromARGB(203, 87, 14, 190);
+  Color col = ColorCode().bgColor;
   DbHelper dbHelper = DbHelper();
+  bool dark = false;
 
   String user_name = '';
   Future getName() async {
@@ -55,7 +57,7 @@ class _SettingsState extends State<Settings> {
                   Padding(
                     padding: const EdgeInsets.only(left: 20, right: 18),
                     child: exitwidget(),
-                  )
+                  ),
                 ],
               ),
             );
@@ -68,8 +70,8 @@ class _SettingsState extends State<Settings> {
       padding: const EdgeInsets.only(top: 6, left: 1, right: 0, bottom: 6),
       child: ElevatedButton(
           onPressed: () {
-             Navigator.of(context).push(CupertinoPageRoute(
-                          builder: ((context) => const WelcomeScreen())));
+            Navigator.of(context).push(CupertinoPageRoute(
+                builder: ((context) => const WelcomeScreen())));
           },
           style: ElevatedButton.styleFrom(primary: Colors.black),
           child: Padding(

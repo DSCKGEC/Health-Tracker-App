@@ -4,6 +4,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:medi_app/controllers/db_helper.dart';
 import 'package:medi_app/pages/loading_screens/loading_screen_add_medicine.dart';
 
+import '../constants/color_codes.dart';
+
 class AddRoutine extends StatefulWidget {
   const AddRoutine({Key? key}) : super(key: key);
 
@@ -13,8 +15,7 @@ class AddRoutine extends StatefulWidget {
 
 class _AddRoutineState extends State<AddRoutine> {
   Color bg = Colors.white;
-  Color col = const Color.fromARGB(203, 87, 14, 190);
-
+  Color col = ColorCode().bgColor;
   bool critical = false;
 
   final TextEditingController _name = TextEditingController();
@@ -55,7 +56,8 @@ class _AddRoutineState extends State<AddRoutine> {
                           dbhelper.addData(_name.text, int.parse(_price.text),
                               int.parse(_quantity.text), _note.text, critical);
                           Navigator.of(context).push(CupertinoPageRoute(
-                          builder: ((context) => const LoadingScreenAddMedicine())));
+                              builder: ((context) =>
+                                  const LoadingScreenAddMedicine())));
                         },
                         child: Padding(
                           padding: const EdgeInsets.all(12.0),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:lottie/lottie.dart';
+import 'package:medi_app/constants/color_codes.dart';
 import 'package:medi_app/controllers/db_helper.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -19,7 +20,7 @@ class _MedicineRoutineState extends State<MedicineRoutine> {
   Map? data;
 
   Color bg = Colors.white;
-  Color col = const Color.fromARGB(203, 87, 14, 190);
+  Color col = ColorCode().bgColor;
 
   @override
   void initState() {
@@ -156,7 +157,7 @@ class _MedicineRoutineState extends State<MedicineRoutine> {
                 Text(
                   'Medicine Number ${ind + 1}',
                   style: TextStyle(
-                      color: Colors.deepPurple.shade900,
+                      color: ColorCode().bgColor,
                       fontSize: 16,
                       fontWeight: FontWeight.bold),
                 ),

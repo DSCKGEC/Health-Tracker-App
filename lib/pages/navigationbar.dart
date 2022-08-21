@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:medi_app/constants/color_codes.dart';
 import 'package:medi_app/pages/add_health_routine.dart';
 import 'package:medi_app/pages/dashboard.dart';
 import 'package:medi_app/pages/medicine_routine.dart';
@@ -18,7 +19,7 @@ class BottomNavBar extends StatefulWidget {
 
 class _BottomNavBarState extends State<BottomNavBar> {
   Color bg = Colors.white;
-  Color col = const Color.fromARGB(203, 87, 14, 190);
+  Color col = ColorCode().bgColor;
   List<IconData> iconList = [
     FontAwesomeIcons.houseMedicalCircleCheck,
     FontAwesomeIcons.heartPulse,
