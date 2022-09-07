@@ -130,26 +130,63 @@ class _RoutineListState extends State<RoutineList> {
                 const SizedBox(height: 20),
                 Padding(
                   padding: const EdgeInsets.only(left: 20, right: 15),
-                  child: Row(
-                    children: [
-                      const Text(
-                        'Health Tips',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      const SizedBox(width: 16),
-                      const Icon(FontAwesomeIcons.notesMedical,
-                          color: Colors.black, size: 26),
-                      const Spacer(),
-                      IconButton(
-                        onPressed: () {},
-                        icon: const Icon(Icons.navigate_next_rounded),
-                        color: Colors.black,
-                        iconSize: 36,
-                      )
-                    ],
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.grey.shade200,
+                    ),
+                    child: Row(
+                      children: [
+                        const Text(
+                          'Change Routine',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 22,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        const SizedBox(width: 16),
+                        const Icon(FontAwesomeIcons.bookMedical,
+                            color: Colors.black, size: 26),
+                        const Spacer(),
+                        IconButton(
+                          onPressed: () {},
+                          icon: const Icon(Icons.navigation_outlined),
+                          color: Colors.black,
+                          iconSize: 36,
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 20),
+                Padding(
+                  padding: const EdgeInsets.only(left: 20, right: 15),
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.grey.shade200,
+                    ),
+                    child: Row(
+                      children: [
+                        const Text(
+                          'Health Tips',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 22,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        const SizedBox(width: 16),
+                        const Icon(FontAwesomeIcons.notesMedical,
+                            color: Colors.black, size: 26),
+                        const Spacer(),
+                        IconButton(
+                          onPressed: () {},
+                          icon: const Icon(Icons.navigate_next_rounded),
+                          color: Colors.black,
+                          iconSize: 36,
+                        )
+                      ],
+                    ),
                   ),
                 ),
                 // (snapshot.data!.length > 3)
@@ -473,84 +510,5 @@ class _RoutineListState extends State<RoutineList> {
     );
   }
 
-  Widget deck() {
-    // ignore: avoid_unnecessary_containers
-    return SwipeDeck(
-      aspectRatio: 1,
-      startIndex: 2,
-      // ignore: avoid_unnecessary_containers
-      emptyIndicator: const Center(
-        child: Text("Nothing Here"),
-      ),
-
-      widgets: id
-          .map((e) => GestureDetector(
-              onTap: () {
-                print(e);
-              },
-              child: Container(
-                height: 1800,
-                width: 1000,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(14),
-                  gradient: fin(e + 1),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(children: const []),
-                ),
-              )))
-          .toList(),
-    );
-  }
-
-  LinearGradient g1() {
-    return LinearGradient(
-      colors: [
-        Colors.orange.shade700,
-        Colors.deepOrange.shade700,
-        Colors.pinkAccent.shade700,
-      ],
-      begin: Alignment.topLeft,
-      end: Alignment.bottomRight,
-    );
-  }
-
-  LinearGradient g2() {
-    return LinearGradient(
-      colors: [
-        Colors.tealAccent.shade400,
-        Colors.teal.shade600,
-        Colors.teal.shade800,
-      ],
-      begin: Alignment.topLeft,
-      end: Alignment.bottomRight,
-    );
-  }
-
-  LinearGradient g3() {
-    return LinearGradient(
-      colors: [
-        Colors.lime.shade900,
-        Colors.greenAccent.shade700,
-        Colors.green.shade800,
-      ],
-      begin: Alignment.topLeft,
-      end: Alignment.bottomRight,
-    );
-  }
-
-  LinearGradient fin(int j) {
-    if (j == 1) {
-      return g1();
-    }
-    if (j % 2 == 0) {
-      return g2();
-    }
-    if (j % 3 == 0) {
-      return g3();
-    }
-
-    return g1();
-  }
+  
 }
