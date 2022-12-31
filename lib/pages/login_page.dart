@@ -52,13 +52,16 @@ class _LoginPageState extends State<LoginPage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const SizedBox(height: 50),
-            Row(
-              children: [
-                Expanded(
-                  child: Lottie.asset('assets/lottiefile/login_hello.json'),
-                ),
-              ],
+            const SizedBox(height: 20),
+            SizedBox(
+              height: 280,
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Lottie.asset('assets/lottiefile/login_hello.json'),
+                  ),
+                ],
+              ),
             ),
             const SizedBox(height: 30),
             Padding(
@@ -89,7 +92,7 @@ class _LoginPageState extends State<LoginPage> {
                   Expanded(
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.purpleAccent.shade700,
+                        backgroundColor: Colors.purpleAccent.shade700,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20)),
                       ),
