@@ -294,8 +294,8 @@ class _MedicineRoutineState extends State<MedicineRoutine> {
                 color: Colors.black, fontSize: 22, fontWeight: FontWeight.bold),
           ),
           SizedBox(
-            height: 70,
-            width: 140,
+            height: MediaQuery.of(context).size.height * 0.1,
+            width: MediaQuery.of(context).size.width * 0.3,
             child: Lottie.asset('assets/lottiefile/play.json'),
           ),
         ],
