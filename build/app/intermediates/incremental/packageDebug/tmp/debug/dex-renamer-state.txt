@@ -1,4 +1,0 @@
-#Mon Jan 16 23:30:49 IST 2023
-base.0=E\:\\4_dev\\Flutter\\Winter of Code\\GDSC\\Health-Tracker-App\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
