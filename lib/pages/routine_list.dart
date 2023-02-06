@@ -4,10 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hive/hive.dart';
 import 'package:medi_app/constants/color_codes.dart';
+import 'package:pedometer/pedometer.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:swipe_deck/swipe_deck.dart';
 import 'package:lottie/lottie.dart';
 import '../controllers/db_helper.dart';
+
 
 class RoutineList extends StatefulWidget {
   const RoutineList({Key? key}) : super(key: key);
@@ -17,6 +20,12 @@ class RoutineList extends StatefulWidget {
 }
 
 class _RoutineListState extends State<RoutineList> {
+  late Stream<StepCount> _stepCountStream;
+  late Stream<PedestrianStatus> _pedestrianStatusStream;
+  String _status = '?', _steps = '?';
+
+
+
   late Box box;
   late SharedPreferences preferences;
   DbHelper dbHelper = DbHelper();
@@ -33,11 +42,65 @@ class _RoutineListState extends State<RoutineList> {
     }
   }
 
+
+
+
   @override
   void initState() {
     super.initState();
     getPreference();
     box = Hive.box('health');
+        Future.delayed(Duration.zero, () async {
+      PermissionStatus activityRecogination =
+          await Permission.activityRecognition.request();
+      if (activityRecogination == PermissionStatus.granted) {
+        initPlatformState();
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text("This permission is required")));
+      }
+    });
+  }
+
+    void onStepCount(StepCount event) {
+    print(event);
+    setState(() {
+      _steps = event.steps.toString();
+    });
+  }
+
+  void onPedestrianStatusChanged(PedestrianStatus event) {
+    print(event);
+    setState(() {
+      _status = event.status;
+    });
+  }
+
+  void onPedestrianStatusError(error) {
+    print('onPedestrianStatusError: $error');
+    setState(() {
+      _status = 'Pedestrian Status not available';
+    });
+    print(_status);
+  }
+
+  void onStepCountError(error) {
+    print('onStepCountError: $error');
+    setState(() {
+      _steps = 'Step Count not available';
+    });
+  }
+
+    void initPlatformState() {
+    _pedestrianStatusStream = Pedometer.pedestrianStatusStream;
+    _pedestrianStatusStream
+        .listen(onPedestrianStatusChanged)
+        .onError(onPedestrianStatusError);
+
+    _stepCountStream = Pedometer.stepCountStream;
+    _stepCountStream.listen(onStepCount).onError(onStepCountError);
+
+    if (!mounted) return;
   }
 
   getPreference() async {
@@ -273,10 +336,10 @@ class _RoutineListState extends State<RoutineList> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
-                  children: const [
+                  children:  [
                     Text(
-                      '6800',
-                      style: TextStyle(
+                      _steps,
+                      style: const TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
                           fontSize: 18),
