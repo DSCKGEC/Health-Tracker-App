@@ -5,6 +5,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:lottie/lottie.dart';
 import 'package:medi_app/constants/color_codes.dart';
 import 'package:medi_app/controllers/db_helper.dart';
+import 'package:medi_app/pages/medicine/medicine_list.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -211,7 +212,10 @@ class _DashboardState extends State<Dashboard> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              element(FontAwesomeIcons.kitMedical, 'Pill ID'),
+              GestureDetector(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Medicines()));
+                },child: element(FontAwesomeIcons.kitMedical, 'Pill ID')),
               element(FontAwesomeIcons.check, 'Rx Check'),
               element(FontAwesomeIcons.disease, 'Diseases'),
               element(FontAwesomeIcons.heartCircleCheck, 'Treatment')
